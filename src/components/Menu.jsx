@@ -9,8 +9,10 @@ const Menu=()=>{
         <Link to="/about">about</Link>
         <Link to="/contacto">Contacto</Link>
         <Link to="/productos">Productos</Link>
+        <Link to="/servicios">Servicios</Link>
         <Link to="/inexistente"></Link>
        </nav>
+       <hr />
        <nav className="menu">
         <NavLink className={({isActive})=>isActive?"active-link":null}  to="/">Home</NavLink>
         <NavLink className={({isActive})=>isActive?"active-link":null}  to="/acerca">Acerca</NavLink>

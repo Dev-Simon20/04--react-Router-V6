@@ -11,6 +11,7 @@ import Productos from "./pages/Productos";
 import ProductoDetalle from "./pages/ProductoDetalle";
 import Login from "./pages/Login";
 import Dash from "./pages/Dash";
+import Servicios from "./pages/Servicios";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -39,6 +40,11 @@ function App() {
           <Route path="/productos" element={<Productos productos={productos}/>} />
           <Route path="/productos/:id" element={<ProductoDetalle productos={productos}/>} />
           <Route path="/*" element={<Error404 />} />
+          <Route path="/servicios" element={<Servicios/>}>
+              <Route index element={<h2>Este es el home de Servicios</h2>}/> 
+              <Route path="/servicios/garantia" element={<h2>Garantia de nuestros Servicios</h2>}/>
+              <Route path="/servicios/lista" element={<h2>La lista  de nuestros Servicios</h2>}/>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
