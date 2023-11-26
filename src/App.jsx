@@ -7,6 +7,8 @@ import Contacto from "./pages/Contacto";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Error404 from "./pages/Error404";
+import Productos from "./pages/Productos";
+import ProductoDetalle from "./pages/ProductoDetalle";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -22,8 +24,12 @@ function App() {
           {/* Renderiza el componente segun la ruta que se encuentre en el navegador */}
           <Route path="/" element={<Home />} />
           <Route path="/acerca" element={<Acerca />} />
+
+          {/* Aca estamso aplicando una redireccion*/}
           <Route path="/about" element={<Navigate to={"/acerca"}/>} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/productos" element={<Productos />} />
+          <Route path="/productos/:id" element={<ProductoDetalle />} />
           <Route path="/*" element={<Error404 />} />
         </Routes>
       </BrowserRouter>

@@ -8,6 +8,7 @@ const Menu=()=>{
         <Link to="/acerca">Acerca</Link>
         <Link to="/about">about</Link>
         <Link to="/contacto">Contacto</Link>
+        <Link to="/productos">Productos</Link>
         <Link to="/inexistente"></Link>
        </nav>
        <nav className="menu">
